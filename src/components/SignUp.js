@@ -59,7 +59,7 @@ const SignUp = () => {
         else {
             console.log("Data Added");
             localStorage.setItem(input.email, JSON.stringify(input));
-            // clear();
+            clear();
         }
 
     }

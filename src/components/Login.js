@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const history = useNavigate();
-    
+
     const [input, setInput] = useState({
         email: "",
         password: "",
     })
-
-    // console.log(input);
 
     const getData = (e) => {
         const { value, name } = e.target;
@@ -54,7 +52,7 @@ const Login = () => {
             const data = JSON.parse(localStorage.getItem(input.email));
             if (data) {
 
-                if (data.password == input.password) {
+                if (data.password === input.password) {
                     console.log("Success");
                     history("/success");
                 }
