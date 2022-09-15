@@ -17,6 +17,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<><Header /><SignUp /></>}>
           </Route>
+          <Route exact path="/login-react" element={<><Header /><SignUp /></>}>
+          </Route>
           <Route exact path="/login" element={<><Header /><Login /></>}>
           </Route>
           <Route exact path="/success" element={<Success />}>
